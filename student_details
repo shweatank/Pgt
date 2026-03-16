@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+struct Student{
+	char name[20];
+	int rollno;
+	int age;
+};
+
+int main(){
+	struct Student s1;
+	char name[20];
+	int rollno;
+	int age;
+	printf("enter name:");
+	scanf("%s",name);
+	printf("enter rollno:");
+	scanf("%d",&rollno);
+	printf("enter age:");
+	scanf("%d",&age);
+
+	strcpy(s1.name,name);
+	s1.rollno=rollno;
+	s1.age=age;
+	printf("name %s :",s1.name);
+	printf("rollno %d:",s1.rollno);
+	printf("age :%d",s1.age);	
+}
