@@ -13,9 +13,16 @@ int mul(int a,int b)
 int main()
 {
 	int x=10,y=20;
-	int (*fp[3])(int ,int)={add,sub,mul};
-	printf("%d\n",fp[0](x,y));
-	printf("%d\n",fp[1](x,y));
-	printf("%d\n",fp[2](x,y));
+	int (*fp)(int ,int);
+	int option;
+	printf("enter your option except '0'");
+	scanf("%d",&option);
+	switch(option)
+	{
+		case 1:fp=add;break;
+		case 2:fp=sub;break;
+		case 3:fp=mul;break;
+	}
+	printf("%d\n",fp(x,y));
 	return 0;
 }
